@@ -27,3 +27,11 @@ En esta entidad tenemos los siguientes atributos:
 4. **Nombre Persona de Contacto**: Es el nombre de la persona con la que la farmacia contacta, no es un atributo primario pues varias personas pueden tener el mismo nombre.
 5. **Fax**: Pueden ser los faxes del laboratio, notese que digo faxes y no fax pues es un atributo multievaluado, quizás un laboratorio puede tener un fax para cada departamento, etc.
 6. **Teléfono**: Pueden ser los distintos teléfonos del laboratorio, es un atributo multievaluado por lo mismo que comentamos antes.
+### **Pedidos**
+En esta entidad tenemos los siguientes atributos, aunque ninguno es un atributo primario:
+1. **Unidades Vendidas**: Es el número de unidades vendidas, idealmente está relacionado con el número de unidades vendidas de medicamentos.
+2. **Fecha de Compra**: Es la fecha en la que se realizó la compra del medicamento.
+### **Clientes**
+En esta entidad encontramos los siguientes atributos:
+1. **Fecha de Pago**: Es la fecha en la que se realiza el pago cada mes (ocurre a final de mes), no es un atributo primario pues habrá más de un cliente suscrito a este plan de la farmacia, lo que da lugar a que varias personas hagan el pago el mismo día.
+2. **Cuentra Bancaria**: Es el número de cuenta del cliente y obviamente es un atributo primario que sirve para identificar a cada cliente por separado.
