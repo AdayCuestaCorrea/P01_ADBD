@@ -1,4 +1,5 @@
 # P01_ADBD - Modelo entidad/relación. Farmacia
+## Aday Cuesta Correa y Manuel José Sebastían Noda
 ## Descripción de cada una de las entidades definidas
 1. **Medicamentos**: En esta entidad se recoge todo lo relacionado con los medicamentos, desde su tipo y familia hasta las unidades en stock, etc.
 2. **Laboratorios**: Esta otra entidad se encarga de almacenar los datos necesarios de los laboratorios con los que la farmacia trata. Posee datos identificativos de cada uno.
@@ -11,6 +12,6 @@ En esta entidad tenemos los siguientes atributos:
 2. **Código**: Es el código del medicamento, en este caso si que es un atributo primario pues no pueden existir 2 medicamentos diferentes con el mismo código.
 3. **Tipo**: Es el tipo del medicamento (jarabe, comprimido, pomada, ...), no es un atributo primario porque pueden existir varios medicamentos cuya aplicación sea en pomada.
 4. **Familia**: Es la familia del medicamento, no es un atributo primario porque pueden existir medicamentos diferentes de la misma familia.
-5. **Unidades en Stock**:
-6. **Unidades Vendidas**:
-7. **Precio**:
+5. **Unidades en Stock**: Es el número de unidades del medicamento que aún quedan en el almacen, no es un atributo primario pues varios medicamentos distintos pueden tener el mismo número de existencias. 
+6. **Unidades Vendidas**: Es el número de unidades que se han vendido de un medicamento, no es un atributo primario pues varios medicamentos pueden haber vendido el mismo número de unidades.
+7. **Precio**: Es el precio del medicamento, no es un atributo primario pues varios medicamentos pueden costar lo mismo.
