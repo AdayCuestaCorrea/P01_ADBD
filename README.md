@@ -1,6 +1,6 @@
 # P01_ADBD - Modelo entidad/relación. Farmacia
 ## Aday Cuesta Correa y Manuel José Sebastían Noda
-## Descripción de cada una de las entidades definidas
+## Descripción de cada una de las entidades definidas.
 1. **Medicamentos**: En esta entidad se recoge todo lo relacionado con los medicamentos, desde su tipo y familia hasta las unidades en stock, etc.
 2. **Laboratorios**: Esta otra entidad se encarga de almacenar los datos necesarios de los laboratorios con los que la farmacia trata. Posee datos identificativos de cada uno.
 3. **Pedidos**: Esta entidad es la encarga de llevar el recuento de pedidos que se hacen de un medicamento y su fecha de compra
@@ -34,4 +34,8 @@ En esta entidad tenemos los siguientes atributos, aunque ninguno es un atributo 
 ### **Clientes**
 En esta entidad encontramos los siguientes atributos:
 1. **Fecha de Pago**: Es la fecha en la que se realiza el pago cada mes (ocurre a final de mes), no es un atributo primario pues habrá más de un cliente suscrito a este plan de la farmacia, lo que da lugar a que varias personas hagan el pago el mismo día.
-2. **Cuentra Bancaria**: Es el número de cuenta del cliente y obviamente es un atributo primario que sirve para identificar a cada cliente por separado.
+2. **Cuentra Bancaria**: Es el número de cuenta del cliente y obviamente es un atributo primario que sirve para identificar a cada cliente por separado, por lo que no se puede repetir.
+## Descripción de cada una de las relaciones definidas.
+**Relación de la entidad *Medicamentos* con la entidad *Laboratorios***: Para relacionar la entidad de los medicamentos con la entidad de los laboratorios hemos creado una relación de **Compra**, de tal manera que los medicamentos se compran y los laboratorios venden (La cantidad está definida gracias a un atributo en la relación). En cuanto a la cardinalidad, un medicamento se puede comprar a varios laboratorios (1:N) y un laboratorio vende varios medicamentos (1:N).
+**Relación de la entidad *Medicamentos* con la entidad *Pedidos***: Para hacer relacionar ambas entidades hemos creado una relación de **Se Vende**, de tal manera que los medicamentos se venden en pedidos (un medicamento se vende en varios pedidos, con una cardinalidad de 1:N) y un pedido contiene medicamentos (con una cardinalidad de 1:N pues un pedido contiene N medicamentos).
+**Relación de la entidad *Pedidos* con la entidad *Clientes***: Para relacionarlas hemos creado una relación de **Con Crédito** de tal manera que un pedido lo realiza un cliente con credito (1:1 pues cada cliente realiza 1 pedido).
