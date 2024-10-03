@@ -1,5 +1,5 @@
 # P01_ADBD - Modelo entidad/relación. Farmacia
-## Aday Cuesta Correa y Manuel José Sebastían Noda
+## Aday Cuesta Correa y Manuel José Sebastián Noda
 ## Descripción de cada una de las entidades definidas.
 1. **Medicamentos**: En esta entidad se recoge todo lo relacionado con los medicamentos, desde su tipo y familia hasta las unidades en stock, etc.
 2. **Laboratorios**: Esta otra entidad se encarga de almacenar los datos necesarios de los laboratorios con los que la farmacia trata. Posee datos identificativos de cada uno.
