@@ -15,6 +15,7 @@ En esta entidad tenemos los siguientes atributos:
 5. **Unidades en Stock**: Es el número de unidades del medicamento que aún quedan en el almacen, no es un atributo primario pues varios medicamentos distintos pueden tener el mismo número de existencias. 
 6. **Unidades Vendidas**: Es el número de unidades que se han vendido de un medicamento, no es un atributo primario pues varios medicamentos pueden haber vendido el mismo número de unidades.
 7. **Precio**: Es el precio del medicamento, no es un atributo primario pues varios medicamentos pueden costar lo mismo.
+8. **Procedencia**: Es la procedencia del medicamento, si está hecho en la propia farmacia o en algún laboratorio.
 ### **Laboratorios**
 En esta entidad tenemos los siguientes atributos:
 1. **Código del Laboratorio**: Es el código del laboratorio, es decir, lo que lo identifica. Es un atributo primario pues no queremos que hayan varios laboratorios con el mismo código.
@@ -35,6 +36,8 @@ En esta entidad tenemos los siguientes atributos, aunque ninguno es un atributo 
 En esta entidad encontramos los siguientes atributos:
 1. **Fecha de Pago**: Es la fecha en la que se realiza el pago cada mes (ocurre a final de mes), no es un atributo primario pues habrá más de un cliente suscrito a este plan de la farmacia, lo que da lugar a que varias personas hagan el pago el mismo día.
 2. **Cuentra Bancaria**: Es el número de cuenta del cliente y obviamente es un atributo primario que sirve para identificar a cada cliente por separado, por lo que no se puede repetir.
+3. **DNI**: Es el DNI del cliente, es un atributo primario pues no queremos que se repitan DNIs.
+4. **Nombre**: Es el nombre del cliente.
 ## Descripción de cada una de las relaciones definidas.
 **Relación de la entidad *Medicamentos* con la entidad *Laboratorios***: Para relacionar la entidad de los medicamentos con la entidad de los laboratorios hemos creado una relación de **Compra**, de tal manera que los medicamentos se compran y los laboratorios venden (La cantidad está definida gracias a un atributo en la relación). En cuanto a la cardinalidad, un medicamento se puede comprar a varios laboratorios (1:N) y un laboratorio vende varios medicamentos (1:N).
 **Relación de la entidad *Medicamentos* con la entidad *Pedidos***: Para hacer relacionar ambas entidades hemos creado una relación de **Se Vende**, de tal manera que los medicamentos se venden en pedidos (un medicamento se vende en varios pedidos, con una cardinalidad de 1:N) y un pedido contiene medicamentos (con una cardinalidad de 1:N pues un pedido contiene N medicamentos).
