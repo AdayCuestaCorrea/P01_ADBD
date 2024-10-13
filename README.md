@@ -39,8 +39,12 @@ En esta entidad encontramos los siguientes atributos:
 3. **DNI**: Es el DNI del cliente, es un atributo primario pues no queremos que se repitan DNIs.
 4. **Nombre**: Es el nombre del cliente.
 ## Descripción de cada una de las relaciones definidas.
+
 **Relación de la entidad *Medicamentos* con la entidad *Laboratorios***: Para relacionar la entidad de los medicamentos con la entidad de los laboratorios hemos creado una relación de **Compra**, de tal manera que los medicamentos se compran y los laboratorios venden (La cantidad está definida gracias a un atributo en la relación). En cuanto a la cardinalidad, un medicamento se puede comprar a varios laboratorios (1:N) y un laboratorio vende varios medicamentos (1:N).
+
 **Relación de la entidad *Medicamentos* con la entidad *Pedidos***: Para hacer relacionar ambas entidades hemos creado una relación de **Se Vende**, de tal manera que los medicamentos se venden en pedidos (un medicamento se vende en varios pedidos, con una cardinalidad de 1:N) y un pedido contiene medicamentos (con una cardinalidad de 1:N pues un pedido contiene N medicamentos).
+
 **Relación de la entidad *Pedidos* con la entidad *Clientes***: Para relacionarlas hemos creado una relación de **Con Crédito** de tal manera que un pedido lo realiza un cliente con credito (1:1 pues cada cliente realiza 1 pedido).
+
 ## Foto del modelo
 ![modelo](https://github.com/AdayCuestaCorrea/P01_ADBD/blob/main/Modelo_ER/Modelo_E_R_Farmacia.png)
